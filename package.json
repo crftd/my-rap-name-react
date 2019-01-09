@@ -18,9 +18,6 @@
     "deploy:minor": "yarn version --minor && git push --follow-tags",
     "deploy:patch": "yarn version --patch && git push --follow-tags"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
