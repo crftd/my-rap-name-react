@@ -26,6 +26,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "eslint-config-airbnb-base": "*"
+    "eslint-config-airbnb-base": "^13.1.0"
   }
 }
