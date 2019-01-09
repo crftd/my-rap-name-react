@@ -1,0 +1,18 @@
+language: node_js
+sudo: false
+cache: yarn
+node_js: 11
+git:
+  depth: 2
+script:
+- yarn test
+- yarn build
+deploy:
+  provider: pages
+  local_dir: build
+  skip_cleanup: true
+  on:
+    tags: true
+    branch: master
+  github_token:
+    secure: NPOoh2PWLMYZ05wDrTqnaymp0kZUoIAtTQ8BtoEoya3TOGe7EQ7Z+ThNL8ZD9F4pLrRew1q0bGuwaR0TkXYtQZOb84ueuwagBXz5DdRuFVIZP0fP72hQzOiSZtLe7Cx0MNszFHX3Z/kKYB4gYotYH0FchOwAzv85NbKWfhnXn5pPLjjJNWm4zlOTGj7Bum/+QJ++mVKdwPXonIY1R9SsKJGPCGJuObcl7FrppR/7Ret2chAasfP7oifw2owBNX6YVWkPdaEmTR3otMnayjNQfvdN48rlFfQA4B7piznk03dtXetR+IIAB5jl0HJ67FGUhNWJyz5UWqmmXbXw1sV7K2mnyOXnzKJEFLuxM31WEIgyvpFJo0EvbF0cDPaNMn+LUXOVSIt6mTDSKNYZYIjRtaQrfaQINecUXvG3so7GvpyLP7I7Rr7PVw09MHA8sIgNT8G1HqCuQli64Kj/bFZytkwOH1mfx3vB8gKWN7lcukCPj0+AiEuKnW732ZfVNv28YphLFMbv9xgskiRtmT8COQRpm2iy926fy0l3hf7LBSCfbp8CxNULqmpLWfYrgFOHJklrLMd86SDX8OovtC40ghzTyh9MJ3KyJsiIB8+H49z9BS8tkz0WiokAf0U8wfQ6dF8Txrk6EsCe4uewU2XlAwsxFXeRlFx4wCYwJccydNs=
