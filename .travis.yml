@@ -5,6 +5,7 @@ node_js: 11
 git:
   depth: 2
 script:
+- yarn lint
 - yarn test
 - yarn build
 deploy:
