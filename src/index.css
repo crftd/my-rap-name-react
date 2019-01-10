@@ -1,10 +1,20 @@
 body {
+  font-family: 'Nunito', sans-serif;
   background-color: #FF6D61;
 }
 
-#root {
+.wrapper {
   height: 100vh;
-  background-image: url('./assets/crown.png'), url('./assets/aubergine.png');
-  background-size: 100px;
-  background-position: 0, 0 10px;
+  background: url('./assets/background.png') repeat 50% 50%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  color: beige;
+  font-size: 60px;
 }

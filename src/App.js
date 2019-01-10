@@ -6,9 +6,10 @@ import NameBox from './components/NameBox/NameBox';
 class App extends Component {
   render() {
     return (
-      <div>
-        Ohi
-        <NameBox/>
+      <div className="wrapper">
+        <main className="main">
+          <NameBox/>
+        </main>
       </div>
     );
   }
