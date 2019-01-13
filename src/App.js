@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import 'normalize.css';
 
-import NameBox from './components/NameBox/NameBox';
+import NameGenerator from './components/NameGenerator/NameGenerator';
 
 class App extends Component {
   render() {
     return (
       <div className="wrapper">
         <main className="main">
-          <NameBox/>
+          <NameGenerator />
         </main>
       </div>
     );
