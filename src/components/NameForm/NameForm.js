@@ -22,23 +22,23 @@ const theme = createMuiTheme({
       light: '#ff9f8f',
       main: '#ff6d61',
       dark: '#c63b37',
-      contrastText: '#000'
+      contrastText: '#000',
     },
     secondary: {
       light: '#ffcd50',
       main: '#f99c17',
       dark: '#c06d00',
-      contrastText: '#000'
-    }
+      contrastText: '#000',
+    },
   },
   typography: {
-    useNextVariants: true
-  }
+    useNextVariants: true,
+  },
 });
 
 const initialValues = {
   name: '',
-  birthday: new Date(1993, 2, 4)
+  birthday: new Date(1993, 2, 4),
 };
 
 const DatePickerField = ({ field, form, ...other }) => {

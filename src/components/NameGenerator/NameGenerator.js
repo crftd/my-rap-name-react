@@ -6,9 +6,7 @@ import NameForm from '../NameForm/NameForm';
 const NameGeneratorWrapper = styled.div`
   width: 100%;
   max-width: 600px;
-
   padding: 20px;
-
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 20px;
 `;
