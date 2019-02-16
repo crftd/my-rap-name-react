@@ -1,17 +1,4 @@
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   background-color: #ff6d61;
-}
-
-.wrapper {
-  height: 100vh;
-  background: url("./assets/background.png") repeat 50% 50%;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }

@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
-import NameBox from '../NameBox/NameBox';
-import NameForm from '../NameForm/NameForm';
+import Singleton from '../../templates/Singleton/Singleton.jsx';
+import NameForm from '../../organisms/NameForm/NameForm.jsx';
+import NameBox from '../../organisms/NameBox/NameBox.jsx';
 
-const NameGeneratorWrapper = styled.div`
-  width: 80%;
-  max-width: 600px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 20px;
-`;
+import background from '../../../assets/background.png';
 
 const theme = createMuiTheme({
   palette: {
@@ -32,14 +26,14 @@ const theme = createMuiTheme({
   },
 });
 
-export default class NameGenerator extends Component {
+export default class Index extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <NameGeneratorWrapper>
+        <Singleton background={background}>
           <NameForm />
           <NameBox />
-        </NameGeneratorWrapper>
+        </Singleton>
       </MuiThemeProvider>
     );
   }

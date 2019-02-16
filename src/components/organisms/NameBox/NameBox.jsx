@@ -3,7 +3,7 @@ import { Chip } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import styled from 'styled-components';
 
-import rapper from '../../assets/rapper.svg';
+import rapper from '../../../assets/rapper.svg';
 
 const NameBoxWrapper = styled.div`
   padding-top: 16px;

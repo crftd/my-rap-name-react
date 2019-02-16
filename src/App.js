@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import 'normalize.css';
 
-import NameGenerator from './components/NameGenerator/NameGenerator';
+import Index from './components/pages/Index/Index.jsx';
 
 class App extends Component {
   render() {
-    return (
-      <div className="wrapper">
-        <main className="main">
-          <NameGenerator />
-        </main>
-      </div>
-    );
+    return <Index />;
   }
 }
 
