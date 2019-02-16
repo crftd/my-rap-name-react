@@ -3,7 +3,6 @@ import { Formik, Form, Field } from 'formik';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { MuiPickersUtilsProvider, DatePicker } from 'material-ui-pickers';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import DateFnsUtils from '@date-io/date-fns';
 import styled from 'styled-components';
 import * as Yup from 'yup';
@@ -17,26 +16,6 @@ const ButtonGroup = styled.div`
   display: flex;
   justify-content: center;
 `;
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: '#ff9f8f',
-      main: '#ff6d61',
-      dark: '#db413d',
-      contrastText: '#000',
-    },
-    secondary: {
-      light: '#ffcd50',
-      main: '#f99c17',
-      dark: '#c06d00',
-      contrastText: '#000',
-    },
-  },
-  typography: {
-    useNextVariants: true,
-  },
-});
 
 const initialValues = {
   name: '',
@@ -77,42 +56,40 @@ const DatePickerField = ({ field, form, ...other }) => {
 export default class NameForm extends Component {
   render() {
     return (
-      <MuiThemeProvider theme={theme}>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={this.props.onSubmit}
-          validationSchema={nameFormSchema}
-        >
-          <Form>
-            <FormGroup>
-              <Field name="name">
-                {({ field, form, other }) => (
-                  <TextField
-                    style={{ width: '100%' }}
-                    label="Name"
-                    helperText={form.errors[field.name]}
-                    error={Boolean(form.errors[field.name])}
-                    {...field}
-                    {...other}
-                  />
-                )}
-              </Field>
-            </FormGroup>
-            <FormGroup>
-              <Field
-                label="Birthday"
-                name="birthday"
-                component={DatePickerField}
-              />
-            </FormGroup>
-            <ButtonGroup>
-              <Button type="submit" color="primary" variant="contained">
-                Get my RAP name
-              </Button>
-            </ButtonGroup>
-          </Form>
-        </Formik>
-      </MuiThemeProvider>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={this.props.onSubmit}
+        validationSchema={nameFormSchema}
+      >
+        <Form>
+          <FormGroup>
+            <Field name="name">
+              {({ field, form, other }) => (
+                <TextField
+                  style={{ width: '100%' }}
+                  label="Name"
+                  helperText={form.errors[field.name]}
+                  error={Boolean(form.errors[field.name])}
+                  {...field}
+                  {...other}
+                />
+              )}
+            </Field>
+          </FormGroup>
+          <FormGroup>
+            <Field
+              label="Birthday"
+              name="birthday"
+              component={DatePickerField}
+            />
+          </FormGroup>
+          <ButtonGroup>
+            <Button type="submit" color="primary" variant="contained">
+              Get my RAP name
+            </Button>
+          </ButtonGroup>
+        </Form>
+      </Formik>
     );
   }
 }
