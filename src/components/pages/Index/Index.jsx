@@ -6,6 +6,8 @@ import NameBox from '../../organisms/NameBox/NameBox.jsx';
 
 import background from '../../../assets/background.png';
 
+import { getRapName } from '../../../services/rap-name';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -27,12 +29,25 @@ const theme = createMuiTheme({
 });
 
 export default class Index extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      rapName: 'Lil pimp',
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    this.setState({ rapName: getRapName() });
+  }
+
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <Singleton background={background}>
-          <NameForm />
-          <NameBox />
+          <NameForm onSubmit={this.handleSubmit} />
+          <NameBox rapName={this.state.rapName} />
         </Singleton>
       </MuiThemeProvider>
     );

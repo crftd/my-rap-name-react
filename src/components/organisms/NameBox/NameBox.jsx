@@ -29,7 +29,7 @@ class NameBox extends Component {
               alt="Rapper image"
             />
           }
-          label="Lil Pimp"
+          label={this.props.rapName}
           color="secondary"
         />
       </NameBoxWrapper>
