@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 import TextField from '../TextField.jsx';
 
@@ -17,7 +17,7 @@ describe('[Snapshot] TextField', () => {
     };
 
     // Act
-    const actualTree = renderer.create(<TextField field={expectedField} form={expectedForm} />).toJSON();
+    const actualTree = shallow(<TextField field={expectedField} form={expectedForm} />);
 
     // Assert
     expect(actualTree).toMatchSnapshot();
