@@ -5,7 +5,7 @@ exports[`[Snapshot] NameForm should render 1`] = `
   enableReinitialize={false}
   initialValues={
     Object {
-      "birthday": 1993-03-03T21:00:00.000Z,
+      "birthday": 1993-03-04T00:00:00.000Z,
       "name": "",
     }
   }
