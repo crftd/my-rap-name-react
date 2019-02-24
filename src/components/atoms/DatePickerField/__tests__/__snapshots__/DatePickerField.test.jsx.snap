@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[Snapshot] DatePickerField should render 1`] = `
+exports[`DatePickerField should render 1`] = `
 <MuiPickersUtilsProvider
   utils={[Function]}
 >

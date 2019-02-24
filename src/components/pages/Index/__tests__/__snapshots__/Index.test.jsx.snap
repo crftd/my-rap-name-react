@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[Snapshot] Index should render 1`] = `
+exports[`Index should render 1`] = `
 <MuiThemeProviderOld
   theme={
     Object {
