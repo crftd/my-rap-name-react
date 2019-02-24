@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Snapshot] NameBox should render 1`] = `
+<styled.div>
+  <WithStyles(Chip)
+    color="secondary"
+    icon={
+      <WithStyles(Avatar)
+        alt="Rapper image"
+        src="rapper.svg"
+        style={
+          Object {
+            "marginBottom": 2,
+            "marginTop": 2,
+            "maxHeight": 32,
+            "maxWidth": 32,
+          }
+        }
+      />
+    }
+    style={
+      Object {
+        "height": "auto",
+      }
+    }
+  />
+</styled.div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Snapshot] Singleton should render 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.main />
+  </styled.div>
+</styled.div>
+`;

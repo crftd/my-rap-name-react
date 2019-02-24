@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Snapshot] DatePickerField should render 1`] = `
+<MuiPickersUtilsProvider
+  utils={[Function]}
+>
+  <ForwardRef
+    error={false}
+    format="dd/MM/yyyy"
+    keyboard={true}
+    mask={[Function]}
+    name="Birthday"
+    onChange={[Function]}
+    onError={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  />
+</MuiPickersUtilsProvider>
+`;

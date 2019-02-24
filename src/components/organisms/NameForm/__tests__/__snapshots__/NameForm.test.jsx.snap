@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Snapshot] NameForm should render 1`] = `
+<Formik
+  enableReinitialize={false}
+  initialValues={
+    Object {
+      "birthday": 1993-03-03T21:00:00.000Z,
+      "name": "",
+    }
+  }
+  isInitialValid={false}
+  validateOnBlur={true}
+  validateOnChange={true}
+  validationSchema={
+    ObjectSchema {
+      "_blacklist": RefSet {
+        "list": Set {},
+        "refs": Map {},
+      },
+      "_conditions": Array [],
+      "_defaultDefault": [Function],
+      "_deps": Array [],
+      "_excludedEdges": Array [],
+      "_exclusive": Object {},
+      "_mutate": false,
+      "_nodes": Array [
+        "name",
+      ],
+      "_options": Object {
+        "abortEarly": true,
+        "recursive": true,
+      },
+      "_type": "object",
+      "_typeError": [Function],
+      "_whitelist": RefSet {
+        "list": Set {},
+        "refs": Map {},
+      },
+      "fields": Object {
+        "name": StringSchema {
+          "_blacklist": RefSet {
+            "list": Set {},
+            "refs": Map {},
+          },
+          "_conditions": Array [],
+          "_deps": Array [],
+          "_exclusive": Object {
+            "min": true,
+            "required": false,
+          },
+          "_mutate": false,
+          "_options": Object {
+            "abortEarly": true,
+            "recursive": true,
+          },
+          "_type": "string",
+          "_typeError": [Function],
+          "_whitelist": RefSet {
+            "list": Set {},
+            "refs": Map {},
+          },
+          "tests": Array [
+            [Function],
+            [Function],
+            [Function],
+          ],
+          "transforms": Array [
+            [Function],
+          ],
+        },
+      },
+      "tests": Array [],
+      "transforms": Array [
+        [Function],
+      ],
+    }
+  }
+>
+  <Form>
+    <FormGroup>
+      <FormikConnect(FieldInner)
+        component={[Function]}
+        name="name"
+      />
+    </FormGroup>
+    <FormGroup>
+      <FormikConnect(FieldInner)
+        component={[Function]}
+        label="Birthday"
+        name="birthday"
+      />
+    </FormGroup>
+    <ButtonGroup>
+      <WithStyles(Button)
+        color="primary"
+        type="submit"
+        variant="contained"
+      >
+        Get my RAP name
+      </WithStyles(Button)>
+    </ButtonGroup>
+  </Form>
+</Formik>
+`;
