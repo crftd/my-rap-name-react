@@ -6,8 +6,4 @@ const FormGroupWrapper = styled.div`
   padding-bottom: 10px;
 `;
 
-export default class FormGroup extends React.Component {
-  render() {
-    return <FormGroupWrapper>{this.props.children}</FormGroupWrapper>;
-  }
-}
+export default ({ children }) => <FormGroupWrapper>{children}</FormGroupWrapper>;

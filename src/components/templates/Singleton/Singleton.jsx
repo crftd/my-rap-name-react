@@ -22,14 +22,10 @@ const MainWrapper = styled.main`
   border-radius: 20px;
 `;
 
-export default class Singleton extends React.Component {
-  render() {
-    return (
-      <Background backgroundUrl={this.props.background}>
-        <FlexContainer>
-          <MainWrapper>{this.props.children}</MainWrapper>
-        </FlexContainer>
-      </Background>
-    );
-  }
-}
+export default ({ background, children }) => (
+  <Background backgroundUrl={background}>
+    <FlexContainer>
+      <MainWrapper>{children}</MainWrapper>
+    </FlexContainer>
+  </Background>
+);

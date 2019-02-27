@@ -370,15 +370,15 @@ exports[`Index should render 1`] = `
     }
   }
 >
-  <Singleton
+  <_default
     background="background.png"
   >
-    <NameForm
+    <_default
       onSubmit={[Function]}
     />
-    <NameBox
+    <_default
       rapName="Lil pimp"
     />
-  </Singleton>
+  </_default>
 </MuiThemeProviderOld>
 `;

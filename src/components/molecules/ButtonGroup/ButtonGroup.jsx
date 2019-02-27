@@ -6,8 +6,4 @@ const ButtonGroupWrapper = styled.div`
   justify-content: center;
 `;
 
-export default class ButtonGroup extends React.Component {
-  render() {
-    return <ButtonGroupWrapper>{this.props.children}</ButtonGroupWrapper>;
-  }
-}
+export default ({ children }) => <ButtonGroupWrapper>{children}</ButtonGroupWrapper>;

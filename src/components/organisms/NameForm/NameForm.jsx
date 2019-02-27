@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import Button from '@material-ui/core/Button';
 import * as Yup from 'yup';
@@ -19,32 +19,20 @@ const nameFormSchema = Yup.object().shape({
     .required('Required'),
 });
 
-export default class NameForm extends Component {
-  render() {
-    return (
-      <Formik
-        initialValues={initialValues}
-        onSubmit={this.props.onSubmit}
-        validationSchema={nameFormSchema}
-      >
-        <Form>
-          <FormGroup>
-            <Field name="name" component={TextField} />
-          </FormGroup>
-          <FormGroup>
-            <Field
-              label="Birthday"
-              name="birthday"
-              component={DatePickerField}
-            />
-          </FormGroup>
-          <ButtonGroup>
-            <Button type="submit" color="primary" variant="contained">
-              Get my RAP name
-            </Button>
-          </ButtonGroup>
-        </Form>
-      </Formik>
-    );
-  }
-}
+export default ({ onSubmit }) => (
+  <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={nameFormSchema}>
+    <Form>
+      <FormGroup>
+        <Field name="name" component={TextField} />
+      </FormGroup>
+      <FormGroup>
+        <Field label="Birthday" name="birthday" component={DatePickerField} />
+      </FormGroup>
+      <ButtonGroup>
+        <Button type="submit" color="primary" variant="contained">
+          Get my RAP name
+        </Button>
+      </ButtonGroup>
+    </Form>
+  </Formik>
+);

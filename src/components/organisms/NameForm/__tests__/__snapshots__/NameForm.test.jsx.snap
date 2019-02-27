@@ -78,20 +78,20 @@ exports[`[Snapshot] NameForm should render 1`] = `
   }
 >
   <Form>
-    <FormGroup>
+    <_default>
       <FormikConnect(FieldInner)
         component={[Function]}
         name="name"
       />
-    </FormGroup>
-    <FormGroup>
+    </_default>
+    <_default>
       <FormikConnect(FieldInner)
         component={[Function]}
         label="Birthday"
         name="birthday"
       />
-    </FormGroup>
-    <ButtonGroup>
+    </_default>
+    <_default>
       <WithStyles(Button)
         color="primary"
         type="submit"
@@ -99,7 +99,7 @@ exports[`[Snapshot] NameForm should render 1`] = `
       >
         Get my RAP name
       </WithStyles(Button)>
-    </ButtonGroup>
+    </_default>
   </Form>
 </Formik>
 `;
