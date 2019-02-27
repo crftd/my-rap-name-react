@@ -4,6 +4,7 @@ exports[`[Snapshot] NameBox should render 1`] = `
 <styled.div>
   <WithStyles(Chip)
     color="secondary"
+    data-testid="rap-name"
     icon={
       <WithStyles(Avatar)
         alt="Rapper image"

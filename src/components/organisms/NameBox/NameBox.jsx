@@ -14,6 +14,7 @@ const NameBoxWrapper = styled.div`
 export default ({ rapName }) => (
   <NameBoxWrapper>
     <Chip
+      data-testid="rap-name"
       style={{ height: 'auto' }}
       icon={
         <Avatar
