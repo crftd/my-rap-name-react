@@ -1,9 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { render, cleanup, act, fireEvent, waitForElement } from 'react-testing-library';
-import NameForm from '../../../organisms/NameForm/NameForm.jsx';
-
-import NameBox from '../../../organisms/NameBox/NameBox.jsx';
 
 import 'jest-dom/extend-expect';
 
@@ -43,17 +40,5 @@ describe('Index', () => {
     // Assert
     const actualRapNameComponent = await waitForElement(() => IndexComponent.getByText(expectedRapName));
     expect(actualRapNameComponent).toHaveTextContent(expectedRapName);
-  });
-
-  it('should set rapName value to the state', () => {
-    // Arrange
-    const IndexComponent = shallow(<Index />);
-    const NameFormNode = IndexComponent.find(NameForm);
-
-    // Act
-    NameFormNode.simulate('submit');
-
-    // Assert
-    expect(IndexComponent.find(NameBox).props().rapName).toEqual(expectedRapName);
   });
 });

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import Singleton from '../../templates/Singleton/Singleton.jsx';
 import NameForm from '../../organisms/NameForm/NameForm.jsx';
@@ -28,28 +28,18 @@ const theme = createMuiTheme({
   },
 });
 
-export default class Index extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      rapName: 'Lil pimp',
-    };
-    this.handleSubmit = this.handleSubmit.bind(this);
+export default () => {
+  const [rapName, setRapName] = useState('Lil pimp');
+  function handleSubmit() {
+    setRapName(getRapName());
   }
 
-  handleSubmit() {
-    this.setState({ rapName: getRapName() });
-  }
-
-  render() {
-    return (
-      <MuiThemeProvider theme={theme}>
-        <Singleton background={background}>
-          <NameForm onSubmit={this.handleSubmit} />
-          <NameBox rapName={this.state.rapName} />
-        </Singleton>
-      </MuiThemeProvider>
-    );
-  }
-}
+  return (
+    <MuiThemeProvider theme={theme}>
+      <Singleton background={background}>
+        <NameForm onSubmit={handleSubmit} />
+        <NameBox rapName={rapName} />
+      </Singleton>
+    </MuiThemeProvider>
+  );
+};
