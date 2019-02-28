@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import rapper from '../../../assets/rapper.svg';
 
 const NameBoxWrapper = styled.div`
-  padding-top: 8px;
+  padding-top: 16px;
   display: flex;
   justify-content: center;
 `;
