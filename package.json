@@ -24,6 +24,7 @@
     "lint:js": "eslint ./src",
     "lint:css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint:css && yarn lint:js",
+    "codeceptjs": "codeceptjs",
     "deploy:major": "yarn version --major && git push --follow-tags",
     "deploy:minor": "yarn version --minor && git push --follow-tags",
     "deploy:patch": "yarn version --patch && git push --follow-tags"
@@ -50,6 +51,8 @@
     ]
   },
   "devDependencies": {
+    "codeceptjs": "^2.0.6",
+    "codeceptjs-resemblehelper": "^1.5.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
@@ -62,6 +65,7 @@
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.5.2"
+    "stylelint-processor-styled-components": "^1.5.2",
+    "webdriverio": "^5.2.2"
   }
 }
