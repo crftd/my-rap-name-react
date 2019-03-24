@@ -9,7 +9,8 @@
   },
   "globals": {
     "Feature": true,
-    "Scenario": true
+    "Scenario": true,
+    "cy": true
   },
   "rules": {
     "comma-dangle": [2, "always-multiline"],

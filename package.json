@@ -25,6 +25,7 @@
     "lint:css": "stylelint 'src/**/*.js'",
     "lint": "yarn lint:css && yarn lint:js",
     "codeceptjs": "codeceptjs",
+    "cypress": "cypress",
     "deploy:major": "yarn version --major && git push --follow-tags",
     "deploy:minor": "yarn version --minor && git push --follow-tags",
     "deploy:patch": "yarn version --patch && git push --follow-tags"
@@ -53,6 +54,7 @@
   "devDependencies": {
     "codeceptjs": "^2.0.6",
     "codeceptjs-resemblehelper": "^1.5.0",
+    "cypress": "^3.1.5",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
