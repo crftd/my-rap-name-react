@@ -11,9 +11,10 @@
     "normalize.css": "^8.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "2.1.5",
+    "react-scripts": "5.0.0",
     "styled-components": "^4.4.1",
-    "yup": "^0.26.10"
+    "yup": "^0.26.10",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,7 +28,9 @@
     "cypress": "cypress",
     "deploy:major": "yarn version --major && git push --follow-tags",
     "deploy:minor": "yarn version --minor && git push --follow-tags",
-    "deploy:patch": "yarn version --patch && git push --follow-tags"
+    "deploy:patch": "yarn version --patch && git push --follow-tags",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "browserslist": [
     ">0.2%",
@@ -68,5 +71,6 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "webdriverio": "^5.23.0"
-  }
+  },
+  "snyk": true
 }
