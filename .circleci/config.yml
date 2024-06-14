@@ -30,10 +30,10 @@ jobs:
           override-ci-command: npm install --legacy-peer-deps
       - run:
           name: Run linter
-          command: node run lint
+          command: npm run lint
       - run:
           name: Run tests
-          command: node run test
+          command: npm run test
 
   build:
     docker:
@@ -44,7 +44,7 @@ jobs:
           override-ci-command: npm install --legacy-peer-deps
       - run:
           name: Build app
-          command: node run build
+          command: npm run build
       - persist_to_workspace:
           root: out
           paths:
