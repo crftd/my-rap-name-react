@@ -1,6 +1,9 @@
 {
   "extends": ["react-app", "airbnb-base"],
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "ignorePatterns": [
+    "./node_modules/*"
+  ],
   "env": {
     "browser": true,
     "node": true,
