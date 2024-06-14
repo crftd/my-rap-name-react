@@ -26,7 +26,8 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
-      - node/install-packages
+      - node/install-packages:
+          override-ci-command: npm install --legacy-peer-deps
       - run:
           name: Run linter
           command: node run lint
@@ -39,7 +40,8 @@ jobs:
       - image: cimg/node:16.20.1
     steps:
       - checkout
-      - node/install-packages
+      - node/install-packages:
+          override-ci-command: npm install --legacy-peer-deps
       - run:
           name: Build app
           command: node run build
